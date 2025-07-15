@@ -81,7 +81,7 @@ render.yaml (optional)
 
 # 📱 NL2SQL Chat App
 
-https://github.com/kimleak/NL2SQLChatApp
+[NL2SQL Chat App](https://github.com/kimleak/NL2SQLChatApp)
 
 
 ## 📄 License
