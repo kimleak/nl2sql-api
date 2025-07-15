@@ -1,0 +1,22 @@
+# Ignore Python bytecode and cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore SQLite temporary files
+*.db-journal
+*.sqlite3-journal
+*.sqlite-journal
+*.sqlite-shm
+*.sqlite-wal
+
+# Ignore Excel output files written during runtime
+*.xlsx
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore environment or config files you don’t want public
+.env
+.env.local
