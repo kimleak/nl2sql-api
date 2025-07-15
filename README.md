@@ -1,32 +1,31 @@
-📡 NL2SQL API
+# 📡 NL2SQL API
+
 A FastAPI-based backend that converts natural language questions into SQL queries, executes them on a SQLite database, and optionally returns results as downloadable Excel files.
 
-🚀 Features
-🧠 Natural Language to SQL conversion
+---
 
-🔍 SQL query execution on SQLite
+## 🚀 Features
 
-📊 Return query results as JSON
+- 🧠 Natural Language to SQL conversion
+- 🔍 SQL query execution on SQLite
+- 📊 Return query results as JSON
+- 📁 Excel download endpoint (`.xlsx`)
+- 🌐 Designed to integrate with iOS (SwiftUI) chat apps
 
-📁 Excel download endpoint (.xlsx)
+---
 
-🌐 Designed to integrate with iOS (SwiftUI) chat apps
+## 📦 API Endpoints
 
-📦 API Endpoints
-POST /query
-Request:
+### `POST /query`
 
-json
-Copy
-Edit
+**Request:**
+```json
 {
   "question": "Show all employees"
 }
-Response:
-
-json
-Copy
-Edit
+```
+** Response:**
+```json
 {
   "query": "SELECT * FROM employees;",
   "results": [
@@ -34,25 +33,15 @@ Edit
     [2, "Bob", "IT", 75000]
   ]
 }
-POST /download
-Request:
-
-json
-Copy
-Edit
-{
-  "question": "Show all employees"
-}
+```
 Response:
 
 Returns: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 
 Attachment: Excel file containing SQL results
 
-📁 Project Structure
-graphql
-Copy
-Edit
+## 📁 Project Structure
+```
 nl2sql-api/
 ├── main.py             # FastAPI entrypoint
 ├── model.py            # NL-to-SQL logic
@@ -61,34 +50,27 @@ nl2sql-api/
 ├── excel.py            # Excel export logic
 ├── requirements.txt    # Python dependencies
 └── .renderignore       # Ignore unnecessary files during deployment
-🧪 Local Setup
-Clone the repo:
-
-bash
-Copy
-Edit
+```
+## 🧪 Local Setup
+1. Clone the repo:
+```
 git clone https://github.com/YOUR_USERNAME/nl2sql-api.git
 cd nl2sql-api
-Create and activate a virtual environment:
-
-bash
-Copy
-Edit
+```
+3. Create and activate a virtual environment:
+```
 python3 -m venv .venv
 source .venv/bin/activate
-Install dependencies:
-
-bash
-Copy
-Edit
+```
+4. Install dependencies:
+```
 pip install -r requirements.txt
-Run locally:
-
-bash
-Copy
-Edit
+```
+6. Run locally:
+```
 uvicorn main:app --reload
-🌍 Deploy
+```
+## 🌍 Deploy
 This app can be deployed to Render with:
 
 Auto deploy on main branch push
@@ -97,5 +79,10 @@ render.yaml (optional)
 
 .renderignore to skip local-only files
 
-📄 License
+# 📱 NL2SQL Chat App
+
+https://github.com/kimleak/NL2SQLChatApp
+
+
+## 📄 License
 MIT License © 2025
