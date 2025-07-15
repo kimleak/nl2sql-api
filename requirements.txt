@@ -3,3 +3,4 @@ uvicorn==0.35.0
 pydantic==2.11.7
 pydantic_core==2.33.2
 starlette==0.47.1
+xlsxwriter==3.1.9
